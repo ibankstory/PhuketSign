@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface SignSettingViewController : UIViewController
-
+@property (nonatomic) NSMutableDictionary *settingDict;
 @end

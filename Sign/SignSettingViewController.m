@@ -11,10 +11,15 @@
 @interface SignSettingViewController ()
 {
     IBOutlet UIButton *doneButton;
+    IBOutlet UITextField *localURL_TextField, *onlineURL_TextField;
+    IBOutlet UISegmentedControl *segmentedControl;
 }
 
+- (IBAction)saveButtonPressed:(id)sender;
 - (IBAction)doneButtonPressed:(id)sender;
+- (IBAction)segmentedControlValueChanged:(id)sender;
 - (void)closeThisView;
+- (void)displaySettingValue;
 @end
 
 @implementation SignSettingViewController
@@ -32,7 +37,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self displaySettingValue];
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -51,6 +60,41 @@
 }
 */
 
+- (void)displaySettingValue
+{
+    localURL_TextField.text = [self.settingDict valueForKey:setting_localURL];
+    onlineURL_TextField.text = [self.settingDict valueForKey:setting_onlineURL];
+    
+    NSInteger selectedIndex = [[self.settingDict valueForKey:setting_route_index_api] integerValue];
+    [segmentedControl setSelectedSegmentIndex:selectedIndex];
+}
+- (IBAction)saveButtonPressed:(id)sender
+{
+    if ([localURL_TextField.text length] > 0 && [onlineURL_TextField.text length] > 0) {
+        
+        if (self.settingDict == nil) {
+            self.settingDict = [[NSMutableDictionary alloc]init];
+        }
+        
+        [self.settingDict setValue:localURL_TextField.text forKey:setting_localURL];
+        [self.settingDict setValue:onlineURL_TextField.text forKey:setting_onlineURL];
+        [self.settingDict setValue:[NSNumber numberWithInteger:segmentedControl.selectedSegmentIndex] forKey:setting_route_index_api];
+        
+        if (segmentedControl.selectedSegmentIndex == 1) {
+            [self.settingDict setValue:onlineURL_TextField.text forKey:setting_route_url];
+        }else{
+            [self.settingDict setValue:localURL_TextField.text forKey:setting_route_url];
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setObject:self.settingDict forKey:settingKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSNotificationCenter defaultCenter] postNotificationName:setting_save_notification object:nil];
+    }
+    
+    
+    
+    [self closeThisView];
+}
 - (IBAction)doneButtonPressed:(id)sender
 {
     [self closeThisView];
@@ -58,5 +102,9 @@
 - (void)closeThisView
 {
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+- (IBAction)segmentedControlValueChanged:(id)sender
+{
+    
 }
 @end

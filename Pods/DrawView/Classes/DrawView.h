@@ -15,6 +15,8 @@ typedef enum : NSUInteger {
 
 @interface DrawView : UIView
 
+- (IBAction)undoDrawing:(id)sender;
+
 // Stroke Color
 @property (nonatomic) UIColor *strokeColor;
 // Stroke width
