@@ -21,13 +21,16 @@ PODS:
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - DrawView (1.0.0)
+  - QBFlatButton (1.1)
 
 DEPENDENCIES:
   - AFNetworking
   - DrawView
+  - QBFlatButton
 
 SPEC CHECKSUMS:
   AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
   DrawView: bacf841ff5da71cadb1396dd118d8ed34851a2bd
+  QBFlatButton: 5fcc26fe56e34cbae7c9de53aec38463f980c76e
 
 COCOAPODS: 0.33.1

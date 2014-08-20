@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Sign-QBFlatButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Sign.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02EB23DAECDC4DD581416D04</key>
+		<key>264E151859554EA4941285C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5F790CA0CEAF47808C32B1C1</key>
+		<key>8128F883FBC349E5B9C5DD6D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC55E74260FE4C339610D3DC</key>
+		<key>9EC813365FCA46778A791023</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EF8F403819574FE0A6F316F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

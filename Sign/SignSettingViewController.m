@@ -7,10 +7,10 @@
 //
 
 #import "SignSettingViewController.h"
-
+#import "QBFlatButton.h"
 @interface SignSettingViewController ()
 {
-    IBOutlet UIButton *doneButton;
+    IBOutlet QBFlatButton *doneButton;
     IBOutlet UITextField *localURL_TextField, *onlineURL_TextField;
     IBOutlet UISegmentedControl *segmentedControl;
 }
@@ -39,6 +39,9 @@
     // Do any additional setup after loading the view.
     
     [self displaySettingValue];
+    
+    [doneButton setSurfaceColor:[UIColor colorWithRed:0.32 green:0.79 blue:0.23 alpha:1]];
+    [doneButton setSideColor:[UIColor colorWithRed:0.13 green:0.57 blue:0.13 alpha:1]];
 }
 
 
@@ -63,7 +66,11 @@
 - (void)displaySettingValue
 {
     localURL_TextField.text = [self.settingDict valueForKey:setting_localURL];
+    
     onlineURL_TextField.text = [self.settingDict valueForKey:setting_onlineURL];
+    if ([onlineURL_TextField.text length] < 1) {
+        onlineURL_TextField.text = @"http://phuketsign.heroku.com/processupload";
+    }
     
     NSInteger selectedIndex = [[self.settingDict valueForKey:setting_route_index_api] integerValue];
     [segmentedControl setSelectedSegmentIndex:selectedIndex];
@@ -101,7 +108,11 @@
 }
 - (void)closeThisView
 {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    
+    
+    [self dismissViewControllerAnimated:YES completion:^(void){
+        [[NSNotificationCenter defaultCenter] postNotificationName:setting_save_notification object:nil];
+    }];
 }
 - (IBAction)segmentedControlValueChanged:(id)sender
 {

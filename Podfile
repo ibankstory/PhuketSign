@@ -4,6 +4,7 @@
 target "Sign" do
 	pod 'AFNetworking'
     pod 'DrawView'
+    pod 'QBFlatButton'
 end
 
 target "SignTests" do
