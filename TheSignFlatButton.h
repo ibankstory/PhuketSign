@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
+
 @interface TheSignFlatButton : UIButton
+@property (strong) IBInspectable UIColor *borderColor;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
+@property (nonatomic) IBInspectable UIColor *defaultBackgroundColor;
+@property (nonatomic) IBInspectable UIColor *activeBackgroundColor;
 
 @end

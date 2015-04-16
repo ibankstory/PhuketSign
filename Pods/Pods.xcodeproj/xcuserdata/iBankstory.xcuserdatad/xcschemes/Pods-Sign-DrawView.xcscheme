@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF8F403819574FE0A6F316F8"
+               BlueprintIdentifier = "65ECF0A5D9C6641FA52A51B6"
                BuildableName = "libPods-Sign-DrawView.a"
                BlueprintName = "Pods-Sign-DrawView"
                ReferencedContainer = "container:Pods.xcodeproj">

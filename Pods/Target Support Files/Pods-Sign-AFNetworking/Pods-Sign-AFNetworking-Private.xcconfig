@@ -1,0 +1,5 @@
+#include "Pods-Sign-AFNetworking.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/AFNetworking" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/DrawView" "${PODS_ROOT}/Headers/Public/QBFlatButton"
+OTHER_LDFLAGS = ${PODS_SIGN_AFNETWORKING_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}

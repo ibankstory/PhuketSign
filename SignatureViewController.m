@@ -7,8 +7,13 @@
 //
 
 #import "SignatureViewController.h"
-
+#import "TheSignFlatButton.h"
 @interface SignatureViewController ()
+{
+    IBOutlet TheSignFlatButton *button1, *button2, *button3, *button4;
+    
+    NSArray *arrayOfButtons;
+}
 
 @end
 
@@ -17,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    arrayOfButtons = [NSArray arrayWithObjects:button1,button2,button3,button4, nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +42,18 @@
 }
 */
 
+- (IBAction)buttonPressed:(id)sender
+{
+    for (TheSignFlatButton *button in arrayOfButtons) {
+        
+        if (sender == button) {
+            [button setBackgroundColor:button.activeBackgroundColor];
+            NSLog(@"YES");
+        }else{
+            [button setBackgroundColor:button.defaultBackgroundColor];
+            NSLog(@"NO");
+        }
+        
+    }
+}
 @end

@@ -1,11 +1,11 @@
 PODS:
   - AFNetworking (2.3.1):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-    - AFNetworking/UIKit
+    - AFNetworking/NSURLConnection (= 2.3.1)
+    - AFNetworking/NSURLSession (= 2.3.1)
+    - AFNetworking/Reachability (= 2.3.1)
+    - AFNetworking/Security (= 2.3.1)
+    - AFNetworking/Serialization (= 2.3.1)
+    - AFNetworking/UIKit (= 2.3.1)
   - AFNetworking/NSURLConnection (2.3.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -29,8 +29,8 @@ DEPENDENCIES:
   - QBFlatButton
 
 SPEC CHECKSUMS:
-  AFNetworking: 6d7b76aa5d04c8c37daad3eef4b7e3f2a7620da3
-  DrawView: bacf841ff5da71cadb1396dd118d8ed34851a2bd
-  QBFlatButton: 5fcc26fe56e34cbae7c9de53aec38463f980c76e
+  AFNetworking: 05b9f6e3aa5ac45bc383b4bb108ef338080a26c7
+  DrawView: 57fd7e86494e1c3e6a319659b0535eb80868768c
+  QBFlatButton: 3cf272985cdbdd04d6bc8b7ae01e4dd62cb09c17
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.36.0.beta.2

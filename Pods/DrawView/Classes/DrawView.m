@@ -16,7 +16,7 @@
     BOOL isDrawingExisting;
     UIBezierPath *signLine;
 }
-
+- (IBAction)undoDrawing:(id)sender;
 @end
 
 @implementation DrawView

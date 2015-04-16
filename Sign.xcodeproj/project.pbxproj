@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		43FA602094214F9CBC85266C /* libPods-Sign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8BC5674A944E748955DF43 /* libPods-Sign.a */; };
+		8C0DCE241AE00FEA00F720A0 /* TheSignFlatButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DCE231AE00FEA00F720A0 /* TheSignFlatButton.m */; };
+		8C0DCE271AE014B600F720A0 /* SignatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0DCE261AE014B600F720A0 /* SignatureViewController.m */; };
+		8C0DCE291AE01A1200F720A0 /* signAreaBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0DCE281AE01A1200F720A0 /* signAreaBG.png */; };
 		8C1ECB5619A270CD00CAD65F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1ECB5519A270CD00CAD65F /* AssetsLibrary.framework */; };
 		8C1ECB5919A271E700CAD65F /* SignSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1ECB5819A271E700CAD65F /* SignSettingViewController.m */; };
 		8C4452A919A2614800E423B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C4452A819A2614800E423B9 /* Foundation.framework */; };
@@ -38,6 +41,11 @@
 
 /* Begin PBXFileReference section */
 		7F8BC5674A944E748955DF43 /* libPods-Sign.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sign.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C0DCE221AE00FEA00F720A0 /* TheSignFlatButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheSignFlatButton.h; sourceTree = "<group>"; };
+		8C0DCE231AE00FEA00F720A0 /* TheSignFlatButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TheSignFlatButton.m; sourceTree = "<group>"; };
+		8C0DCE251AE014B600F720A0 /* SignatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignatureViewController.h; sourceTree = "<group>"; };
+		8C0DCE261AE014B600F720A0 /* SignatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignatureViewController.m; sourceTree = "<group>"; };
+		8C0DCE281AE01A1200F720A0 /* signAreaBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signAreaBG.png; sourceTree = "<group>"; };
 		8C1ECB5519A270CD00CAD65F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8C1ECB5719A271E700CAD65F /* SignSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignSettingViewController.h; sourceTree = "<group>"; };
 		8C1ECB5819A271E700CAD65F /* SignSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignSettingViewController.m; sourceTree = "<group>"; };
@@ -60,7 +68,8 @@
 		8C4452CF19A2614800E423B9 /* SignTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SignTests-Info.plist"; sourceTree = "<group>"; };
 		8C4452D119A2614800E423B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8C4452D319A2614800E423B9 /* SignTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignTests.m; sourceTree = "<group>"; };
-		C3EE8BEE50A440A996330874 /* Pods-Sign.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sign.xcconfig"; path = "Pods/Pods-Sign.xcconfig"; sourceTree = "<group>"; };
+		9F9A6AB555FF1180B015CCCF /* Pods-Sign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sign.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sign/Pods-Sign.release.xcconfig"; sourceTree = "<group>"; };
+		D2839BB3136AB5DAB5606BCB /* Pods-Sign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sign.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sign/Pods-Sign.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +101,16 @@
 		8C44529C19A2614800E423B9 = {
 			isa = PBXGroup;
 			children = (
+				8C0DCE281AE01A1200F720A0 /* signAreaBG.png */,
+				8C0DCE251AE014B600F720A0 /* SignatureViewController.h */,
+				8C0DCE261AE014B600F720A0 /* SignatureViewController.m */,
+				8C0DCE221AE00FEA00F720A0 /* TheSignFlatButton.h */,
+				8C0DCE231AE00FEA00F720A0 /* TheSignFlatButton.m */,
 				8C4452AE19A2614800E423B9 /* Sign */,
 				8C4452CD19A2614800E423B9 /* SignTests */,
 				8C4452A719A2614800E423B9 /* Frameworks */,
 				8C4452A619A2614800E423B9 /* Products */,
-				C3EE8BEE50A440A996330874 /* Pods-Sign.xcconfig */,
+				EA8032BA7D6A8A8AF23221CC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +179,15 @@
 				8C4452D019A2614800E423B9 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA8032BA7D6A8A8AF23221CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2839BB3136AB5DAB5606BCB /* Pods-Sign.debug.xcconfig */,
+				9F9A6AB555FF1180B015CCCF /* Pods-Sign.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C0DCE291AE01A1200F720A0 /* signAreaBG.png in Resources */,
 				8C4452C119A2614800E423B9 /* Images.xcassets in Resources */,
 				8C4452B319A2614800E423B9 /* InfoPlist.strings in Resources */,
 				8C4452BC19A2614800E423B9 /* Main.storyboard in Resources */,
@@ -275,7 +299,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-Sign-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sign/Pods-Sign-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A8333BBEC429465F8D25F793 /* Check Pods Manifest.lock */ = {
@@ -301,7 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C1ECB5919A271E700CAD65F /* SignSettingViewController.m in Sources */,
+				8C0DCE271AE014B600F720A0 /* SignatureViewController.m in Sources */,
 				8C4452B519A2614800E423B9 /* main.m in Sources */,
+				8C0DCE241AE00FEA00F720A0 /* TheSignFlatButton.m in Sources */,
 				8C4452BF19A2614800E423B9 /* SignViewController.m in Sources */,
 				8C4452B919A2614800E423B9 /* SignAppDelegate.m in Sources */,
 			);
@@ -427,7 +453,7 @@
 		};
 		8C4452D819A2614800E423B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3EE8BEE50A440A996330874 /* Pods-Sign.xcconfig */;
+			baseConfigurationReference = D2839BB3136AB5DAB5606BCB /* Pods-Sign.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -441,7 +467,7 @@
 		};
 		8C4452D919A2614800E423B9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3EE8BEE50A440A996330874 /* Pods-Sign.xcconfig */;
+			baseConfigurationReference = 9F9A6AB555FF1180B015CCCF /* Pods-Sign.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
