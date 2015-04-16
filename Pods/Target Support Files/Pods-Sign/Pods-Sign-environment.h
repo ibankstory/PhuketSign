@@ -54,6 +54,12 @@
 #define COCOAPODS_VERSION_MINOR_DrawView 0
 #define COCOAPODS_VERSION_PATCH_DrawView 0
 
+// PPSSignatureView
+#define COCOAPODS_POD_AVAILABLE_PPSSignatureView
+#define COCOAPODS_VERSION_MAJOR_PPSSignatureView 0
+#define COCOAPODS_VERSION_MINOR_PPSSignatureView 1
+#define COCOAPODS_VERSION_PATCH_PPSSignatureView 2
+
 // QBFlatButton
 #define COCOAPODS_POD_AVAILABLE_QBFlatButton
 #define COCOAPODS_VERSION_MAJOR_QBFlatButton 1

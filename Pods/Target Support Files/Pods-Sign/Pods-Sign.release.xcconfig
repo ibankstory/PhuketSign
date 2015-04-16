@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/DrawView" "${PODS_ROOT}/Headers/Public/QBFlatButton"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/DrawView" -isystem "${PODS_ROOT}/Headers/Public/QBFlatButton"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Sign-AFNetworking" -l"Pods-Sign-DrawView" -l"Pods-Sign-QBFlatButton" -framework "CoreGraphics" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/DrawView" "${PODS_ROOT}/Headers/Public/PPSSignatureView" "${PODS_ROOT}/Headers/Public/QBFlatButton"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/DrawView" -isystem "${PODS_ROOT}/Headers/Public/PPSSignatureView" -isystem "${PODS_ROOT}/Headers/Public/QBFlatButton"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Sign-AFNetworking" -l"Pods-Sign-DrawView" -l"Pods-Sign-PPSSignatureView" -l"Pods-Sign-QBFlatButton" -framework "CoreGraphics" -framework "GLKit" -framework "MobileCoreServices" -framework "OpenGLES" -framework "Security" -framework "SystemConfiguration"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods
