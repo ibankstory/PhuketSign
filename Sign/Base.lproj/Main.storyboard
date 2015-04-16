@@ -236,6 +236,9 @@
                                             <color key="titleColor" red="0.96986526250839233" green="0.97998863458633423" blue="0.97987693548202515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearButtonPressed:" destination="nYj-LW-VFg" eventType="touchUpInside" id="qH9-x3-5Do"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnP-4b-G66">
                                         <rect key="frame" x="866" y="26" width="150" height="50"/>
@@ -249,6 +252,9 @@
                                             <color key="titleColor" red="0.96986526250839233" green="0.97998863458633423" blue="0.97987693548202515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="nYj-LW-VFg" eventType="touchUpInside" id="mHZ-tT-xJY"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="พิธีลงนามบันทึกข้อตกลงความร่วมมือ MOU ระหว่าง SIPA - ม.อ. - สทท." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUJ-5Z-mGi">
                                         <rect key="frame" x="214" y="39" width="596" height="21"/>
@@ -433,6 +439,27 @@ SIPA</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rnT-Ct-TdL">
+                                <rect key="frame" x="140" y="246" width="744" height="414"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWS-nU-EM3" customClass="PPSSignatureView">
+                                        <rect key="frame" x="0.0" y="0.0" width="744" height="414"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pPk-RL-Fhe" customClass="PPSSignatureView">
+                                        <rect key="frame" x="744" y="0.0" width="744" height="414"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8O-sW-BXw" customClass="PPSSignatureView">
+                                        <rect key="frame" x="1488" y="0.0" width="744" height="414"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2W-qA-Eic" customClass="PPSSignatureView">
+                                        <rect key="frame" x="2232" y="0.0" width="744" height="414"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.33402001857757568" green="0.58394956588745117" blue="0.87434220314025879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -448,6 +475,7 @@ SIPA</string>
                         <outlet property="button2" destination="0gs-PV-0bR" id="WJM-Hd-AXi"/>
                         <outlet property="button3" destination="eGP-Si-lmw" id="Rn3-3Z-yn7"/>
                         <outlet property="button4" destination="yzd-QT-a7h" id="KcW-qI-60W"/>
+                        <outlet property="scrollView" destination="rnT-Ct-TdL" id="vAL-QR-Y7X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXn-rh-E5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
