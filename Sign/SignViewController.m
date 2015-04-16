@@ -50,10 +50,10 @@ static float drawView_height = 650;
     self.settingDict = [self getSetting];
     [self setStatusLabel];
     
-    [saveButton setSurfaceColor:[UIColor colorWithRed:0.32 green:0.79 blue:0.23 alpha:1]];
+    [saveButton setFaceColor:[UIColor colorWithRed:0.32 green:0.79 blue:0.23 alpha:1]];
     [saveButton setSideColor:[UIColor colorWithRed:0.13 green:0.57 blue:0.13 alpha:1]];
     
-    [clearButton setSurfaceColor:[UIColor colorWithRed:0.91 green:0.29 blue:0.24 alpha:1]];
+    [clearButton setFaceColor:[UIColor colorWithRed:0.91 green:0.29 blue:0.24 alpha:1]];
     [clearButton setSideColor:[UIColor colorWithRed:0.75 green:0.21 blue:0.17 alpha:1]];
 }
 - (void)viewDidAppear:(BOOL)animated

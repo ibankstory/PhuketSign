@@ -40,7 +40,7 @@
     
     [self displaySettingValue];
     
-    [doneButton setSurfaceColor:[UIColor colorWithRed:0.32 green:0.79 blue:0.23 alpha:1]];
+    [doneButton setFaceColor:[UIColor colorWithRed:0.32 green:0.79 blue:0.23 alpha:1]];
     [doneButton setSideColor:[UIColor colorWithRed:0.13 green:0.57 blue:0.13 alpha:1]];
 }
 
