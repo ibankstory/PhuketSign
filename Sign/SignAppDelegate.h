@@ -7,6 +7,7 @@
 //
 
 #define openSettingView @"openSettingView"
+#define openSettingViewV2 @"openSettingViewV2"
 #define settingKey @"settingKey"
 
 #define setting_localURL @"setting_localURL"

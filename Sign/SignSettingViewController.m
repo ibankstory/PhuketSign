@@ -8,11 +8,12 @@
 
 #import "SignSettingViewController.h"
 #import "QBFlatButton.h"
-@interface SignSettingViewController ()
+@interface SignSettingViewController ()<UIAlertViewDelegate>
 {
     IBOutlet QBFlatButton *doneButton;
     IBOutlet UITextField *localURL_TextField, *onlineURL_TextField;
     IBOutlet UISegmentedControl *segmentedControl;
+    IBOutlet QBFlatButton *clearCacheButton;
 }
 
 - (IBAction)saveButtonPressed:(id)sender;
@@ -40,8 +41,11 @@
     
     [self displaySettingValue];
     
-    [doneButton setFaceColor:[UIColor colorWithRed:0.32 green:0.79 blue:0.23 alpha:1]];
+    [doneButton setFaceColor:[UIColor colorWithRed:0.92 green:0.652 blue:0.238 alpha:1]];
     [doneButton setSideColor:[UIColor colorWithRed:0.13 green:0.57 blue:0.13 alpha:1]];
+    
+    [clearCacheButton setFaceColor:[UIColor colorWithRed:0.889 green:0.17 blue:0.102 alpha:1]];
+    [clearCacheButton setSideColor:[UIColor colorWithRed:0.351 green:0.069 blue:0.042 alpha:1]];
 }
 
 
@@ -116,6 +120,52 @@
 }
 - (IBAction)segmentedControlValueChanged:(id)sender
 {
+    
+}
+
+- (IBAction)clearCacheButtonPressed:(id)sender
+{
+ 
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"Clear cache?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Yes", nil];
+    alert.tag = 191;
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag == 191) {
+        if (buttonIndex == 1) {
+            NSLog(@"Clear cache");
+            [self clearCache];
+        }
+    }
+}
+
+- (void)clearCache{
+    
+    @try {
+        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSFileManager *filemanager = [NSFileManager defaultManager];
+        
+        NSError *error = nil;
+        NSArray *files = [filemanager contentsOfDirectoryAtPath:documentsPath error:&error];
+        NSLog(@"files %@",files);
+        
+        for (NSString *filename in files) {
+            NSString *filepath = [[documentsPath stringByAppendingString:@"/"] stringByAppendingString:filename];
+            NSLog(@"filepath %@",filepath);
+            NSError *theError = nil;
+            if ([filemanager fileExistsAtPath:filepath]) {
+                [filemanager removeItemAtPath:filepath error:&error];
+            }
+        }
+    }
+    @catch (NSException *exception) {
+        
+    }
+    @finally {
+    }
+    
     
 }
 @end

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="nYj-LW-VFg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="nYj-LW-VFg">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Sign View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignViewController" id="BYZ-38-t0r" customClass="SignViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -145,7 +145,7 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Local URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImX-Os-0L1">
                                 <rect key="frame" x="20" y="62" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.18577820062637329" green="0.5303993821144104" blue="0.12397224456071854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3gq-7c-4Ig">
@@ -156,11 +156,11 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online URL" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xor-38-yTD">
                                 <rect key="frame" x="20" y="110" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.18577820062637329" green="0.5303993821144104" blue="0.12397224456071854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yib-k9-pBY" customClass="QBFlatButton">
-                                <rect key="frame" x="328" y="510" width="140" height="72"/>
+                                <rect key="frame" x="46" y="431" width="448" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,8 +170,30 @@
                                     <action selector="saveButtonPressed:" destination="Oa5-FL-lrq" eventType="touchUpInside" id="HCG-r7-V5F"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fx6-NL-bAq">
+                                <rect key="frame" x="120" y="181" width="300" height="29"/>
+                                <segments>
+                                    <segment title="Local"/>
+                                    <segment title="Online"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="Oa5-FL-lrq" eventType="valueChanged" id="AaU-xH-8Oj"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAH-iQ-7As" customClass="QBFlatButton">
+                                <rect key="frame" x="364" y="511" width="130" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear Cache">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCacheButtonPressed:" destination="Oa5-FL-lrq" eventType="touchUpInside" id="gRY-EC-1pA"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-Zg-XEt" customClass="QBFlatButton">
-                                <rect key="frame" x="72" y="510" width="140" height="72"/>
+                                <rect key="frame" x="46" y="511" width="310" height="72"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,22 +203,12 @@
                                     <action selector="doneButtonPressed:" destination="Oa5-FL-lrq" eventType="touchUpInside" id="bUJ-8V-Jxs"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fx6-NL-bAq">
-                                <rect key="frame" x="120" y="181" width="300" height="29"/>
-                                <segments>
-                                    <segment title="Local"/>
-                                    <segment title="Online"/>
-                                </segments>
-                                <color key="tintColor" red="0.18577820062637329" green="0.5303993821144104" blue="0.12397224456071854" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="segmentedControlValueChanged:" destination="Oa5-FL-lrq" eventType="valueChanged" id="AaU-xH-8Oj"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.65882354974746704" green="0.87058830261230469" blue="0.92156869173049927" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.21046262979507446" green="0.5037236213684082" blue="0.83610117435455322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="clearCacheButton" destination="wAH-iQ-7As" id="yW9-Zk-9t1"/>
                         <outlet property="doneButton" destination="Yib-k9-pBY" id="kDo-YS-JKe"/>
                         <outlet property="localURL_TextField" destination="cgL-Gs-sGA" id="Nbu-pV-V8S"/>
                         <outlet property="onlineURL_TextField" destination="3gq-7c-4Ig" id="5ew-Dx-xdR"/>
@@ -205,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pDr-K4-1TM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1447" y="-2"/>
+            <point key="canvasLocation" x="305" y="2097"/>
         </scene>
         <!--Signature View Controller-->
         <scene sceneID="rXc-Gf-vQL">
@@ -232,7 +244,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="e3G-qd-qTZ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Clear">
+                                        <state key="normal" title="ล้าง">
                                             <color key="titleColor" red="0.96986526250839233" green="0.97998863458633423" blue="0.97987693548202515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -242,13 +254,13 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnP-4b-G66">
                                         <rect key="frame" x="866" y="26" width="150" height="50"/>
-                                        <color key="backgroundColor" red="0.92019355297088623" green="0.65286159515380859" blue="0.23868182301521301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.88463068008422852" green="0.65198975801467896" blue="0.29754942655563354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="I3y-13-1o6"/>
                                             <constraint firstAttribute="height" constant="50" id="tTL-hf-Hf3"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <state key="normal" title="Save">
+                                        <state key="normal" title="บันทึก">
                                             <color key="titleColor" red="0.96986526250839233" green="0.97998863458633423" blue="0.97987693548202515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -460,8 +472,34 @@ SIPA</string>
                                     </view>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jC-np-zsq">
+                                <rect key="frame" x="8" y="728" width="32" height="32"/>
+                                <state key="normal" image="Setting Icon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Oa5-FL-lrq" kind="modal" identifier="openSettingViewV2" modalPresentationStyle="formSheet" id="HUH-rj-Lzu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-RP-rPj">
+                                <rect key="frame" x="962" y="730" width="46" height="30"/>
+                                <state key="normal" title="LAST">
+                                    <color key="titleColor" red="0.047058823529411764" green="0.15686274509803921" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getLastImageButtonPressed:" destination="nYj-LW-VFg" eventType="touchDragOutside" id="Ej9-Gv-iMu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Local" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8An-E9-Tr7">
+                                <rect key="frame" x="48" y="734" width="60" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.047058823529411764" green="0.15686274509803921" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.33402001857757568" green="0.58394956588745117" blue="0.87434220314025879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.37324142456054688" green="0.6003151535987854" blue="0.86314874887466431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MdO-CX-kcD" firstAttribute="top" secondItem="3qp-xj-EZU" secondAttribute="top" id="Iaa-2t-nZ4"/>
                             <constraint firstAttribute="trailing" secondItem="MdO-CX-kcD" secondAttribute="trailing" id="NBZ-H2-nLV"/>
@@ -476,6 +514,7 @@ SIPA</string>
                         <outlet property="button3" destination="eGP-Si-lmw" id="Rn3-3Z-yn7"/>
                         <outlet property="button4" destination="yzd-QT-a7h" id="KcW-qI-60W"/>
                         <outlet property="scrollView" destination="rnT-Ct-TdL" id="vAL-QR-Y7X"/>
+                        <outlet property="selectedServerLabel" destination="8An-E9-Tr7" id="HXw-Wz-9XV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXn-rh-E5X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -494,4 +533,7 @@ SIPA</string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="hB4-YK-gns"/>
+    </inferredMetricsTieBreakers>
 </document>

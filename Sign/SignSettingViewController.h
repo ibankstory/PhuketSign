@@ -10,4 +10,5 @@
 
 @interface SignSettingViewController : UIViewController
 @property (nonatomic) NSMutableDictionary *settingDict;
+
 @end
